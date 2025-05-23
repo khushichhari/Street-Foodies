@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; 
 import "./styles/Food.css";
 import { FaShoppingCart } from "react-icons/fa";
 import vadapav from "./assets/vadapav.webp";
@@ -22,24 +22,26 @@ function Food() {
   const [cart, setCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
 
-  // Track quantities per food item
+  // Default all quantities to 0
   const [quantities, setQuantities] = useState(
     foodItems.reduce((acc, _, idx) => {
-      acc[idx] = 1;
+      acc[idx] = 0;
       return acc;
     }, {})
   );
 
-  // Handle quantity input change per food item
+  // Handle quantity input change
   const handleQuantityChange = (index, value) => {
-    const qty = Math.max(1, Number(value));
+    const qty = Math.max(0, Number(value));
     setQuantities((prev) => ({ ...prev, [index]: qty }));
   };
 
-  // Add selected item and quantity to cart, or update if exists
+  // Add to cart if quantity > 0
   const handleAddToCart = (index) => {
     const item = foodItems[index];
     const qty = quantities[index];
+
+    if (qty <= 0) return; // Don't add if quantity is 0 or less
 
     setCart((prevCart) => {
       const existingIndex = prevCart.findIndex(
@@ -48,18 +50,18 @@ function Food() {
 
       if (existingIndex >= 0) {
         const updatedCart = [...prevCart];
-        updatedCart[existingIndex].quantity = qty; // update quantity instead of adding
+        updatedCart[existingIndex].quantity = qty;
         return updatedCart;
       } else {
         return [...prevCart, { ...item, quantity: qty }];
       }
     });
 
-    // Reset input to 1 after adding
-    setQuantities((prev) => ({ ...prev, [index]: 1 }));
+    // Optionally reset quantity to 0 after adding
+    setQuantities((prev) => ({ ...prev, [index]: 0 }));
   };
 
-  // Remove one item from cart by name
+  // Remove one item from cart
   const handleRemoveItem = (name) => {
     setCart((prevCart) => prevCart.filter((item) => item.name !== name));
   };
@@ -91,7 +93,7 @@ function Food() {
             <p>Price: ₹{item.price}</p>
             <input
               type="number"
-              min="1"
+              min="0"
               value={quantities[index]}
               onChange={(e) => handleQuantityChange(index, e.target.value)}
               className="qty-input"
@@ -99,6 +101,7 @@ function Food() {
             <button
               className="cart-btn"
               onClick={() => handleAddToCart(index)}
+              disabled={quantities[index] <= 0}
             >
               Add to Cart
             </button>
