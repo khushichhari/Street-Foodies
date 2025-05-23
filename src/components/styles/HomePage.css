@@ -1,0 +1,98 @@
+.homepage-background {
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh; /* full height on large screens */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem 5%;
+}
+
+.homepage-content {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  margin: 5rem 0;
+}
+
+.line {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
+.tag {
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  color: #FF5722;
+  margin-top: 10px;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #388e3c;
+}
+
+@media (max-width: 1024px) {
+  .homepage-background {
+    min-height: 80vh;  /* reduce height */
+    justify-content: center;
+  }
+
+  .homepage-content {
+    margin: 3rem 0;
+    padding: 25px;
+  }
+
+  .tag {
+    font-size: 32px;
+  }
+
+  .line {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .homepage-background {
+    min-height: 60vh; /* smaller height for small devices */
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+
+  .homepage-content {
+    padding: 20px;
+    margin: 2rem 0;
+    width: 90%;
+  }
+
+  .tag {
+    font-size: 26px;
+  }
+
+  .line {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

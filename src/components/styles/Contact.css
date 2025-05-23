@@ -1,0 +1,121 @@
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 5rem;
+  gap: 3rem;
+  background-color: #f4f4ef;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.contact-head {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.stall-img {
+  width: 300px;
+  border-radius: 13rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contact-right {
+  flex: 1;
+  max-width: 500px;
+  min-width: 280px;
+  padding: 1rem;
+}
+
+.contact-right p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.contact-right h2 {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.footer {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 1rem 1rem;
+  font-size: 0.95rem;
+  border-top: 2px solid #ff5722;
+  margin-top: 3rem;
+}
+
+.footer p {
+  margin: 6px 0;
+}
+
+/* Responsive Behavior for Tablets and Below */
+@media (max-width: 992px) {
+  .contact-container {
+    padding: 2rem 3rem;
+    gap: 2rem;
+  }
+
+  .stall-img {
+    max-width: 80%;
+    border-radius: 10rem;
+  }
+
+  .contact-right p {
+    font-size: 1.5rem;
+  }
+
+  .contact-right h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 600px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .contact-left,
+  .contact-right {
+    margin: 0;
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .stall-img {
+    max-width: 65%;
+    border-radius: 5rem;
+  }
+
+  .contact-head {
+    font-size: 3rem;
+  }
+
+  .contact-right p {
+    font-size: 1.2rem;
+  }
+
+  .contact-right h2 {
+    font-size: 1.1rem;
+  }
+
+  .footer {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+}
