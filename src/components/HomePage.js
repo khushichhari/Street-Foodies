@@ -27,16 +27,6 @@ function HomePage() {
           <h3 className="line1"> Timing : 5:00 pm to 9:30pm at evening.
             Free home delivery order up to 50₹.</h3>
           <h3 className="line1"> Chicken handi & Mutton handi orders are accepted here.</h3>
-
-          <h3 className="line1">
-            {" "}
-            Timing : 5:00 pm to 9:30pm at evening. Free home delivery! order up
-            to 50₹.
-          </h3>
-          <h3 className="line1">
-            {" "}
-            Chicken handi & Mutton handi orders are accepted here.
-          </h3>
         </div>
         <div className="delivery">
           {" "}
