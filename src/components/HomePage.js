@@ -22,8 +22,8 @@ function HomePage() {
           <a href="tel:9503208766">
             <button className="btn">Order Now</button>
           </a>
-          <h3 className="line1"> Timing : 5:00 pm to 9:30pm at evening</h3>
-          <h3 className="line1"> Free home delivery order Up to 50₹ </h3>
+          <h3 className="line1"> Timing : 5:00 pm to 9:30pm at evening.
+            Free home delivery order up to 50₹.</h3>
         </div>
       </div>
       <Food/>
