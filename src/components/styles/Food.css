@@ -3,7 +3,6 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
-  margin-top: 2rem;
 }
 
 .food-card {
@@ -38,6 +37,7 @@
 .food-head{
     text-align: center;
     font-size: 3rem;
+    margin-top: 5rem;
 }
 
 .icon{
