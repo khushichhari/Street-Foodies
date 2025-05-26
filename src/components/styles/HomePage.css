@@ -1,11 +1,36 @@
-.homepage-background {
+/* .homepage-background {
   background-size: cover;
   background-position: center;
-  min-height: 90vh; /* full height on large screens */
+  min-height: 90vh; 
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 2rem 5%;
+} */
+
+.homepage-background {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.delivery {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.delivery-gif {
+  width: 400px;
+  height: auto;
+  margin-top: 23rem;
+  margin-right: 3rem;
 }
 
 .homepage-content {
@@ -49,6 +74,9 @@
   background-color: #388e3c;
 }
 
+
+
+
 @media (max-width: 1024px) {
   .homepage-background {
     min-height: 80vh;  /* reduce height */
@@ -66,6 +94,12 @@
 
   .line {
     font-size: 18px;
+  }
+    .delivery-gif {
+    width: 300px;
+    margin-top: 15rem;
+    margin-right: 2rem;
+
   }
 }
 @media (max-width: 600px) {
@@ -94,5 +128,9 @@
   .btn {
     font-size: 14px;
     padding: 10px 20px;
+  }
+    .delivery-gif {
+    width: 300px;
+    margin-top: 43rem;
   }
 }
